@@ -1,0 +1,34 @@
+﻿<Window x:Class="Gradus.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gradus"
+        mc:Ignorable="d"
+        Title="Acerca de" Height="Auto" Width="400" SizeToContent="Height">
+    <Grid>
+        <RichTextBox Margin="10" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Label FontSize="36">Gradus</Label>
+                    <Label>v 1.0</Label>
+                </Paragraph>
+                <Paragraph FontSize="12">
+                    Aplicación Realizada para la
+                    <Bold>Universidad de las Fuerzas Armadas ESPE.</Bold>
+                    <LineBreak />
+                    <LineBreak />
+                    <Bold>Autor:</Bold> Jonathan Andres (ksprwhite@gmail.com)
+                </Paragraph>
+                <Paragraph>
+                    <LineBreak />
+                    <Bold FontSize="14">Créditos</Bold>
+                    <LineBreak />
+                    <LineBreak />
+                    John Limones
+                    <Bold>[co-desarrollador]</Bold> (jjlimones@espe.edu.ec)
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>
