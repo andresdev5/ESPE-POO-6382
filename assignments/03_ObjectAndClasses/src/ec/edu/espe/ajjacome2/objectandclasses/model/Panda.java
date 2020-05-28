@@ -5,6 +5,9 @@ package ec.edu.espe.ajjacome2.objectandclasses.model;
  * @author jon_m
  */
 public class Panda {
+    /**
+     * Panda allowed food
+     */
     public static enum Food {
         Bamboo("bambú"),
         Insect("insecto"),
@@ -95,6 +98,10 @@ public class Panda {
         return position;
     }
     
+    public void setPosition(Coords position) {
+        this.position = position;
+    }
+    
     public final void setName(String name) {
         this.name = name;
     }
@@ -114,9 +121,5 @@ public class Panda {
     
     public int getAge() {
         return age;
-    }
-    
-    private void setPosition(Coords position) {
-        this.position = position;
     }
 }

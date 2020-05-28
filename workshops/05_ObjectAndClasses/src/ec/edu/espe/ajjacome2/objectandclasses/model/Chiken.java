@@ -13,6 +13,10 @@ public class Chiken {
     public void doStuff() {
         cluck();
         wander();
+        eat();
+        drink();
+        poop();
+        layAnEgg();
     }
     
     private void cluck() {
@@ -23,8 +27,30 @@ public class Chiken {
         System.out.printf("The chiken %s is wandering\n", name);
     }
     
-    private void eat() {}
-    private void drink() {}
-    private void poop() {}
-    private void layAnEgg() {}
+    private void eat() {
+        System.out.printf(
+            "The chiken %s of color %s and age %d is eating\n",
+            name, color, age);
+    }
+    
+    private void drink() {
+        System.out.printf("The chiken %s is drinking\n", name);
+    }
+    
+    private Poop poop() {
+        Poop poopObject = new Poop();
+        System.out.printf("The chiken %s is now pooping\n", name);
+        return poopObject;
+    }
+    
+    private Egg layAnEgg() {
+        Egg egg = null;
+        
+        if (isMolting) {
+            egg = new Egg();
+            System.out.printf("The chiken %s is laying an egg\n", name);
+        }
+        
+        return egg;
+    }
 }
