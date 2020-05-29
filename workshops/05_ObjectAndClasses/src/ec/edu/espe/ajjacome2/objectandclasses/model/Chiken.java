@@ -5,18 +5,24 @@ package ec.edu.espe.ajjacome2.objectandclasses.model;
  * @author jon_m
  */
 public class Chiken {
+    private int id;
     private String name;
     private String color;
     private int age;
     private boolean isMolting;
     
-    public void doStuff() {
+    public Chiken(
+        int id, String name, String color, int age, boolean isMolting) {
+        this.id = id;
+        this.name = name;
+        this.color = color;
+        this.age = age;
+        this.isMolting  = isMolting;
+    }
+    
+    public void doStuff(int forTime) {
         cluck();
         wander();
-        eat();
-        drink();
-        poop();
-        layAnEgg();
     }
     
     private void cluck() {
@@ -47,10 +53,16 @@ public class Chiken {
         Egg egg = null;
         
         if (isMolting) {
-            egg = new Egg();
+            egg = new Egg(1);
             System.out.printf("The chiken %s is laying an egg\n", name);
         }
         
         return egg;
+    }
+
+    @Override
+    public String toString() {
+        return "Chiken{" + "id=" + id + ", name=" + name + ", color=" + color + 
+               ", age=" + age + ", isMolting=" + isMolting + '}';
     }
 }
